@@ -1,31 +1,80 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Folha de Pagamento - Valéria Esteves Advogados</title>
-      <%= stylesheet_link_tag "application", media: "all" %>
-      <%= javascript_include_tag "application" %>
-      <%= csrf_meta_tags %>
-      <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-      <![endif]-->
-    </head>
-    <body>
-    <header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="navbar-inner">
-        <div class="container">
-          <%= link_to "Folha de Pagamento", '#', class: "brand" %>
-          <nav>
-            <ul class="nav">
-              <li><%= link_to "Home",    '#' %></li>
-              <li><%= link_to "Login", '#' %></li>
-              <li><%= link_to "Sobre", '#' %></li>
-            </ul>
-          </nav>
+<head>
+  <title>Folha de Pagamento - Valéria Esteves Advogados</title>
+  <%= stylesheet_link_tag "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+      <%= link_to "Folha de Pagamento", '#', class: "brand" %>
+      <nav>
+        <ul class="nav">
+          <li><%= link_to "Home", '#' %></li>
+          <li><%= link_to "Login", '#' %></li>
+          <li><%= link_to "Sobre", '#' %></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span3">
+      <div class="well">
+        <div class="accordion" id="accordion">
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                Tarefas Administrativas
+              </a>
+            </div>
+            <div id="collapse1" class="accordion-body collapse">
+              <div class="accordion-inner">
+                <ul class="nav nav-list">
+                  <li><a href="#"><i class="icon-home"></i>Filiais</a></li>
+                  <li><a href="#"><i class="icon-user"></i>Funcionários</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                Grupo 2
+              </a>
+            </div>
+            <div id="collapse2" class="accordion-body collapse">
+              <div class="accordion-inner">
+                Anim pariatur cliche...
+              </div>
+            </div>
+          </div>
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                Grupo 3
+              </a>
+            </div>
+            <div id="collapse3" class="accordion-body collapse">
+              <div class="accordion-inner">
+                Grupo 3
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </header>
-    <div class="container">
+    </div>
+    <div class="span9">
       <%= yield %>
     </div>
-    </body>
+  </div>
+</div>
+</body>
 </html>
