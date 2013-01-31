@@ -19,4 +19,10 @@ class CitiesController < ApplicationController
     end
   end
 
+  def destroy
+    City.find(params[:id]).destroy
+    flash[:success] = "Cidade deletada com sucesso."
+    redirect_to cities_url
+  end
+
 end

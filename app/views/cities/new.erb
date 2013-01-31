@@ -8,7 +8,7 @@
     <%= f.text_field :name %>
 
     <%= f.label :state_id, "Estado" %>
-    <%= f.select :state_id, @states.map {|s| [s.name, s.id]} %>
+    <%= f.select :state_id, State.all.map {|s| [s.name, s.id]} %>
 
     <br>
     <%= f.submit "Criar", class: "btn btn-primary" %>

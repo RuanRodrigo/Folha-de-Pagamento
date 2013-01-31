@@ -1,0 +1,34 @@
+<h1>Filiais</h1>
+<h2>Todos os Registros</h2>
+
+<div>
+  <%= link_to "Criar Nova Filial", 'branches/new', class: "btn btn-primary" %>
+</div>
+<br>
+<div>
+  <table class="table table-bordered table-striped table-hover">
+    <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Endereço</th>
+      <th>Cidade</th>
+      <th>CEP</th>
+      <th>Telefone</th>
+      <th>Ações</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @branches.each do |branch| %>
+        <tr>
+          <td><%= branch.name %></td>
+          <td><%= branch.address.to_s + " " + branch.street_number.to_s + " " + branch.try(:address_complement).to_s %></td>
+          <td><%= branch.city.name %></td>
+          <td><%= branch.postal_code %></td>
+          <td><%= branch.phone_number %></td>
+          <td><%= link_to "Deletar", {action: "destroy", id: branch.id}, confirm: "Tem certeza?", class: "btn btn-danger", method: :delete %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+<%= will_paginate @cities %>

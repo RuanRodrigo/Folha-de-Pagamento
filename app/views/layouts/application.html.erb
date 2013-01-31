@@ -38,10 +38,10 @@
             <div id="collapse1" class="accordion-body collapse">
               <div class="accordion-inner">
                 <ul class="nav nav-list">
-                  <li><a href="#"><i class="icon-briefcase"></i>Filiais</a></li>
+                  <li><%= link_to raw("<i class=\"icon-briefcase\"></i>Filiais"), :controller =>  'branches'%></li>
                   <li><a href="#"><i class="icon-user"></i>Funcionários</a></li>
-                  <li><%= link_to raw("<i class=\"icon-home\"></i>Cidades"), "cities"%></li>
-                  <li><%= link_to raw("<i class=\"icon-home\"></i>Estados"), "states"%></li>
+                  <li><%= link_to raw("<i class=\"icon-home\"></i>Cidades"), :controller =>  'cities'%></li>
+                  <li><%= link_to raw("<i class=\"icon-home\"></i>Estados"), :controller =>  'states'%></li>
                 </ul>
               </div>
             </div>
