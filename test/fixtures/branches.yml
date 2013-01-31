@@ -1,0 +1,36 @@
+# == Schema Information
+#
+# Table name: branches
+#
+#  id                 :integer          not null, primary key
+#  name               :string(255)
+#  address            :string(255)
+#  street_number      :integer
+#  district           :string(255)
+#  city_id            :integer
+#  phone_number       :integer
+#  postal_code        :integer
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  address_complement :string(255)
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  address: MyString
+  street_number: 1
+  district: MyString
+  city_id: 
+  phone_number: 1
+  postal_code: 1
+
+two:
+  name: MyString
+  address: MyString
+  street_number: 1
+  district: MyString
+  city_id: 
+  phone_number: 1
+  postal_code: 1

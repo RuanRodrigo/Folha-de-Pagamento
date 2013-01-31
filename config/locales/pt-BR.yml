@@ -207,10 +207,23 @@ pt-BR:
       <<: *errors
     models:
       state: Estado
+      branch: Filiai
+      city: Cidade
     attributes:
       state:
         name: Nome
         acronym: Sigla
+      city:
+        name: Nome
+        state_id: Estado
+      branch:
+        name: Nome
+        address: Endereço
+        street_number: Número
+        district: Bairro
+        city_id: Cidade
+        phone_number: Telefone
+        postal_code: CEP
   will_paginate:
     previous_label: "&#8592; Anterior"
     next_label: "Próxima &#8594;"

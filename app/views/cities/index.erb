@@ -12,6 +12,7 @@
       <th>ID</th>
       <th>Nome</th>
       <th>Estado</th>
+      <th>Ações</th>
     </tr>
     </thead>
     <tbody>
@@ -20,6 +21,7 @@
           <td><%= city.id %></td>
           <td><%= city.name %></td>
           <td><%= city.state.name %></td>
+          <td><%= link_to "Deletar", {action: "destroy", id: city.id}, confirm: "Tem certeza?", class: "btn btn-danger", method: :delete %></td>
         </tr>
     <% end %>
     </tbody>
