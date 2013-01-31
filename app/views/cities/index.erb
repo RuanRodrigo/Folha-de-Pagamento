@@ -1,0 +1,28 @@
+<h1>Cidades</h1>
+<h2>Todos os Registros</h2>
+
+<div>
+  <%= link_to "Criar Nova Cidade", 'cities/new', class: "btn btn-primary" %>
+</div>
+<br>
+<div>
+  <table class="table table-bordered table-striped table-hover">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Estado</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @cities.each do |city| %>
+        <tr>
+          <td><%= city.id %></td>
+          <td><%= city.name %></td>
+          <td><%= city.state.name %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+<%= will_paginate @cities %>
