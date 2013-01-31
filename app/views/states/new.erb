@@ -1,0 +1,16 @@
+<h1>Estados</h1>
+<h2>Novo Registro</h2>
+
+<%= form_for(@state) do |f| %>
+
+    <%= render 'shared/error_messages', object: f.object %>
+    <%= f.label :name, "Nome" %>
+    <%= f.text_field :name %>
+
+    <%= f.label :acronym, "Sigla" %>
+    <%= f.text_field :acronym, class: "span1" %>
+
+    <br>
+    <%= f.submit "Criar", class: "btn btn-primary" %>
+
+<% end %>
